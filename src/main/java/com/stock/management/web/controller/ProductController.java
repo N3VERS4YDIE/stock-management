@@ -1,7 +1,7 @@
 package com.stock.management.web.controller;
 
-import com.stock.management.persistence.repository.ProductRepository;
 import com.stock.management.persistence.entity.Product;
+import com.stock.management.persistence.repository.ProductRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
