@@ -1,9 +1,7 @@
 package com.stock.management.persistence.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +29,7 @@ public class Product {
     private String description;
 
     @ManyToMany(mappedBy = "products")
-    @JsonIncludeProperties({"idCategory", "name"})
+    @JsonIncludeProperties({ "idCategory", "name" })
     private List<Category> categories;
 
     @ManyToMany(mappedBy = "products")

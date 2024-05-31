@@ -1,14 +1,11 @@
 package com.stock.management.persistence.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -25,11 +22,11 @@ public class StoreUser {
 
     @ManyToOne
     @JoinColumn(name = "id_store", insertable = false, updatable = false)
-    @JsonIncludeProperties({"idStore", "name"})
+    @JsonIncludeProperties({ "idStore", "name" })
     private Store store;
 
     @ManyToOne
     @JoinColumn(name = "id_user", insertable = false, updatable = false)
-    @JsonIncludeProperties({"idUser", "name"})
+    @JsonIncludeProperties({ "idUser", "name" })
     private User user;
 }

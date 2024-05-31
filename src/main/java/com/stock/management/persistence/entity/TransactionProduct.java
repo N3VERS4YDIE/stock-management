@@ -23,7 +23,7 @@ public class TransactionProduct {
 
     @ManyToOne
     @JoinColumn(name = "id_product", insertable = false, updatable = false)
-    @JsonIncludeProperties({"idProduct", "name"})
+    @JsonIncludeProperties({ "idProduct", "name" })
     private Product product;
 
     public TransactionProductPK getId() {
